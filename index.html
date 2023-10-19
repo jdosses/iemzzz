@@ -2,15 +2,37 @@
 <html>
 <head>
     <title>Auto-Click Link Based on Operating System</title>
+    <style>
+        body {
+            background-color: rgb(212, 212, 213);
+        }
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+            color: rgb(68, 68, 68);
+            text-align: center;
+            margin-top: 5%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hidden {
+             display: none;
+        } 
+    </style>
 </head>
 <body>
     <div>
     <p>This page will automatically click a link based on your operating system.</p>
     
-    <a id="windowsLink" href="https://jdosses.github.io/Augmented/Objects/Slide003.glb">Click on Windows</a>
-    <a id="macLink" rel="ar" href="https://jdosses.github.io/Augmented/Objects/Slide03.usdz#callToAction=Go%20back&amp;checkoutTitle=The%20Naked%20Gallery&amp;checkoutSubtitle=The%20Naked%Gallery%20"><img src="https://jdosses.github.io/iemzzz/images/thumbnail.png"></a>
-    <a id="linuxLink" href="https://jdosses.github.io/thenakedgallery.github.io/">Click on Linux</a>
-    <a id="androidLink" href="https://jdosses.github.io/Augmented/Objects/Slide003.glb">Click on Android</a>
+    <a class="hidden" id="windowsLink" href="https://jdosses.github.io/iemzzz/objects/iemzzz01.glb">Click on Windows</a>
+    <a id="macLink" rel="ar" href="https://jdosses.github.io/iemzzz/objects/iemzzz01.usdz#callToAction=Go%20back&amp;checkoutTitle=The%20Naked%20Gallery&amp;checkoutSubtitle=The%20Naked%Gallery%20"><img src="https://jdosses.github.io/iemzzz/images/thumbnail.png"></a>
+    <a class="hidden" id="linuxLink" href="https://jdosses.github.io/thenakedgallery.github.io/">Click on Linux</a>
+    <a class="hidden" id="androidLink" href="https://jdosses.github.io/iemzzz/objects/iemzzz01.glb">Click on Android</a>
     </div>
     <script>
         window.onload = function() {
