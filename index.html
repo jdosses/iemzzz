@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirect Based on Operating System</title>
+</head>
+<body>
+    <p>This page will automatically redirect you based on your operating system.</p>
+
+    <script>
+        function redirectBasedOnOS() {
+            var userAgent = window.navigator.userAgent;
+
+            if (userAgent.indexOf("Win") !== -1) {
+                // User is on a Windows operating system
+                window.location.href = 'https://jdosses.github.io/Augmented/Objects/Slide003.glb';
+            } else if (userAgent.indexOf("Mac") !== -1) {
+                // User is on a macOS operating system
+                window.location.href = 'https://jdosses.github.io/Augmented/Objects/Slide03.usdz#callToAction=Go%20back&amp;checkoutTitle=The%20Naked%20Gallery&amp;checkoutSubtitle=The%20Naked%Gallery%20';
+            } else if (userAgent.indexOf("Linux") !== -1) {
+                // User is on a Linux operating system
+                window.location.href = 'https://jdosses.github.io/thenakedgallery.github.io/';
+            } else if (userAgent.indexOf("Android") !== -1) {
+                // User is on an Android device
+                window.location.href = 'https://jdosses.github.io/Augmented/Objects/Slide003.glb';
+            } else {
+                // For all other operating systems, provide a default link
+                window.location.href = 'https://jdosses.github.io/thenakedgallery.github.io/';
+            }
+        }
+
+        // Call the redirect function when the page loads
+        window.onload = redirectBasedOnOS;
+    </script>
+</body>
+</html>
