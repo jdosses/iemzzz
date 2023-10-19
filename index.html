@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Redirect Based on Operating System</title>
+    <title>Auto-Click Link Based on Operating System</title>
 </head>
 <body>
-    <p>This page will automatically redirect you based on your operating system.</p>
-
+    <p>This page will automatically click a link based on your operating system.</p>
+    
+    <a id="windowsLink" href="https://jdosses.github.io/Augmented/Objects/Slide003.glb">Click on Windows</a>
+    <a id="macLink" rel="ar"  href="https://jdosses.github.io/Augmented/Objects/Slide03.usdz#callToAction=Go%20back&amp;checkoutTitle=The%20Naked%20Gallery&amp;checkoutSubtitle=The%20Naked%Gallery%20"><img src="https://jdosses.github.io/iemzzz/images/thumbnail.png"></a>
+    <a id="linuxLink" href="https://jdosses.github.io/thenakedgallery.github.io/">Click on Linux</a>
+    <a id="androidLink" href="https://jdosses.github.io/Augmented/Objects/Slide003.glb">Click on Android</a>
+    
     <script>
-        function redirectBasedOnOS() {
+        window.onload = function() {
+            // Get the user agent string
             var userAgent = window.navigator.userAgent;
-
+            
+            // Find the link elements by their IDs
+            var windowsLink = document.getElementById('windowsLink');
+            var macLink = document.getElementById('macLink');
+            var linuxLink = document.getElementById('linuxLink');
+            var androidLink = document.getElementById('androidLink');
+            
+            var fallbackLink = "https://jdosses.github.io/thenakedgallery.github.io/"; // Set your fallback URL here
+            
             if (userAgent.indexOf("Win") !== -1) {
                 // User is on a Windows operating system
-                window.location.href = 'https://jdosses.github.io/Augmented/Objects/Slide003.glb';
+                windowsLink.click();
             } else if (userAgent.indexOf("Mac") !== -1) {
                 // User is on a macOS operating system
-                window.location.href = 'https://jdosses.github.io/Augmented/Objects/Slide03.usdz#callToAction=Go%20back&amp;checkoutTitle=The%20Naked%20Gallery&amp;checkoutSubtitle=The%20Naked%Gallery%20';
+                macLink.click();
             } else if (userAgent.indexOf("Linux") !== -1) {
                 // User is on a Linux operating system
-                window.location.href = 'https://jdosses.github.io/thenakedgallery.github.io/';
+                linuxLink.click();
             } else if (userAgent.indexOf("Android") !== -1) {
                 // User is on an Android device
-                window.location.href = 'https://jdosses.github.io/Augmented/Objects/Slide003.glb';
+                androidLink.click();
             } else {
-                // For all other operating systems, provide a default link
-                window.location.href = 'https://jdosses.github.io/thenakedgallery.github.io/';
+                // User's operating system is not recognized, use the fallback link
+                window.location.href = fallbackLink;
             }
-        }
-
-        // Call the redirect function when the page loads
-        window.onload = redirectBasedOnOS;
+        };
     </script>
 </body>
 </html>
