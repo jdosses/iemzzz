@@ -3,7 +3,6 @@
 <head>
     <title>The Naked Gallery</title>
     <meta http-equiv="AddType" content="model/vnd.reality">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
      <script>
         window.onload = function() {
             // Get the user agent string
@@ -45,8 +44,6 @@
         window.open(customUrlToOpen, '_self');
          }
         }, false);
-
-
     </script>
     <style>
         body {
@@ -75,25 +72,10 @@
 <body>
     <div>
     <p>The Naked Gallery</p>
-
-        <!--Start model-viewer-->
-
-        <a><model-viewer class="center" src="https://jdosses.github.io/iemzzz/objects/iemzzz-android-still.glb" reveal="auto" quick-look-browsers="safari chrome firefox" ar ar-modes="scene-viewer webxr quick-look" camera-controls poster="https://jdosses.github.io/iemzzz/images/thumbnail-02.png" ios-src="https://jdosses.github.io/iemzzz/objects/iemzzz-rota.usdz#callToAction=Onlyfans%20&amp;checkoutTitle=The%20Naked%20Gallery&amp;checkoutSubtitle=The%20Naked%20Gallery%20" alt="augmented reality 3d experience" style="widht:100%; height:100%;" auto-rotate rotation-per-second="800%" auto-rotate-delay="0">
-
-<button slot="ar-button" style="font-size: 36px; text-align: center; color: white; background-color: #ABB3B6; border-radius: 25px; border: none; padding: 8px 20px; display: inline-block; margin: 0; position: absolute; top: 5%; left: 38%;">
-      Activate AR
-  </button> 
-
-</model-viewer></a>
-
-        <!--End model-viewer-->
-    
     <a class="hidden" id="windowsLink" href="https://jdosses.github.io/iemzzz/objects/iemzzz-android-still.glb">Click on Windows</a>
     <a id="macLink" rel="ar" href="https://jdosses.github.io/iemzzz/objects/iemzzz-rota.usdz#callToAction=Onlyfans%20&amp;checkoutTitle=The%20Naked%20Gallery&amp;checkoutSubtitle=The%20Naked%20Gallery%20"><img src="https://jdosses.github.io/iemzzz/images/thumbnail-02.png"></a>
     <a class="hidden" id="linuxLink" href="https://jdosses.github.io/iemzzz/fallback.html">Click on Linux</a>
     <a class="hidden" id="androidLink" href="https://jdosses.github.io/iemzzz/objects/iemzzz-android-still.glb">Click on Android</a>
     </div>
-   
-    
 </body>
 </html>
