@@ -13,6 +13,7 @@
         var macLink = document.getElementById('macLink');
         var linuxLink = document.getElementById('linuxLink');
         var androidLink = document.getElementById('androidLink');
+        var iosLink = document.getElementById('iosLink'); // Add a new link for iOS
         var desktopLink = document.getElementById('desktopLink'); // Add a new link for desktop
 
         var fallbackLink = "https://jdosses.github.io/iemzzz/fallback.html"; // Set your fallback URL here
@@ -30,13 +31,16 @@
         } else if (userAgent.indexOf("Android") !== -1) {
             // User is on an Android device
             androidLink.click();
+        } else if (userAgent.indexOf("iPhone") !== -1 || userAgent.indexOf("iPad") !== -1) {
+            // User is on an iOS device
+            iosLink.click();
         } else {
             // User's operating system is not recognized, use the fallback link
             if (userAgent.indexOf("Mobile") === -1) {
                 // User is on a desktop (not a mobile device)
                 window.location.href = desktopFallbackLink;
             } else {
-                // User is on a mobile device
+                // User is on a mobile device (not iOS)
                 window.location.href = fallbackLink;
             }
         }
@@ -81,8 +85,9 @@
     <div>
     <p>The Naked Gallery</p>
     <a class="hidden" id="windowsLink" href="https://jdosses.github.io/iemzzz/objects/iemzzz-android-still.glb">Click on Windows</a>
-    <a id="macLink" rel="ar" href="https://jdosses.github.io/iemzzz/objects/iemzzz-rota.usdz#callToAction=Onlyfans%20&amp;checkoutTitle=The%20Naked%20Gallery&amp;checkoutSubtitle=The%20Naked%20Gallery%20"><img src="https://jdosses.github.io/iemzzz/images/thumbnail-02.png"></a>
+    <a id="iosLink" rel="ar" href="https://jdosses.github.io/iemzzz/objects/iemzzz-rota.usdz#callToAction=Onlyfans%20&amp;checkoutTitle=The%20Naked%20Gallery&amp;checkoutSubtitle=The%20Naked%20Gallery%20"><img src="https://jdosses.github.io/iemzzz/images/thumbnail-02.png"></a>
     <a class="hidden" id="linuxLink" href="https://jdosses.github.io/iemzzz/fallback.html">Click on Linux</a>
+    <a class="hidden" id="macLink" href="https://jdosses.github.io/iemzzz/fallback.html">Click on Linux</a>
     <a class="hidden" id="androidLink" href="https://jdosses.github.io/iemzzz/objects/iemzzz-android-still.glb">Click on Android</a>
     <a class="hidden" id="desktopLink" href="https://jdosses.github.io/iemzzz/fallback.html">Click on Desktop</a>
     </div>
