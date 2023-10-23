@@ -3,7 +3,7 @@
 <head>
     <title>The Naked Gallery</title>
     <meta http-equiv="AddType" content="model/vnd.reality">
-    <script>
+  <script>
     window.onload = function() {
         // Get the user agent string
         var userAgent = window.navigator.userAgent;
@@ -30,15 +30,12 @@
         } else if (userAgent.indexOf("Android") !== -1) {
             // User is on an Android device
             androidLink.click();
+        } else if (userAgent.indexOf("Windows NT") !== -1) {
+            // User is on a desktop Windows operating system
+            desktopLink.click();
         } else {
             // User's operating system is not recognized, use the fallback link
-            if (userAgent.indexOf("Mobile") === -1) {
-                // User is on a desktop (not a mobile device)
-                window.location.href = desktopFallbackLink;
-            } else {
-                // User is on a mobile device
-                window.location.href = fallbackLink;
-            }
+            window.location.href = fallbackLink;
         }
     };
 
