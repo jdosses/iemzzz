@@ -46,16 +46,18 @@
     };
 </script>     
 <script>
-    const linkElement = document.getElementById("iosLink");
+    document.addEventListener('DOMContentLoaded', function() {
+    const iosLink = document.getElementById('iosLink');
 
-    linkElement.addEventListener("message", function (event) {
-        if (event.data === "_apple_ar_quicklook_button_tapped") {
-            // Handle the user tap.
-            // You can open a different URL, display a message, or perform any other action here.
-            const customUrlToOpen = "https://www.onlyfans.com/iemzzz"; // Replace with your custom URL
-            window.open(customUrlToOpen, '_blank');
-        }
-    }, false);   
+    iosLink.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        // Handle the user tap.
+        // You can open a different URL, display a message, or perform any other action here.
+        const customUrlToOpen = "https://www.onlyfans.com/iemzzz"; // Replace with your custom URL
+        window.open(customUrlToOpen, '_blank');
+    });
+});   
 </script>
     <style>
         body {
@@ -85,8 +87,10 @@
     <div>
     <p>The Naked Gallery</p>
     <a class="hidden" id="windowsLink" href="https://jdosses.github.io/iemzzz/fallback.html">Click on Windows</a>
-    <a id="iosLink" rel="ar" href="https://jdosses.github.io/iemzzz/objects/iemzzz-rota.usdz#callToAction=Onlyfans%20&amp;checkoutTitle=The%20Naked%20Gallery&amp;checkoutSubtitle=The%20Naked%20Gallery%20"><img src="https://jdosses.github.io/iemzzz/images/thumbnail-02.png"></a>
     <a class="hidden" id="linuxLink" href="https://jdosses.github.io/iemzzz/fallback.html">Click on Linux</a>
+    <a id="iosLink" rel="ar" href="https://jdosses.github.io/iemzzz/objects/iemzzz-rota.usdz#callToAction=Onlyfans%20&amp;checkoutTitle=The%20Naked%20Gallery&amp;checkoutSubtitle=The%20Naked%20Gallery%20">
+    <img src="https://jdosses.github.io/iemzzz/images/thumbnail-02.png">
+    </a>
     <a class="hidden" id="macLink" href="https://jdosses.github.io/iemzzz/fallback.html">Click on Linux</a>
     <a class="hidden" id="androidLink" href="https://jdosses.github.io/iemzzz/objects/iemzzz-android-still.glb">Click on Android</a>
     <a class="hidden" id="desktopLink" href="https://jdosses.github.io/iemzzz/fallback.html">Click on Desktop</a>
