@@ -4,6 +4,17 @@
 <meta http-equiv="AddType" content="model/vnd.reality">
 <title>The Naked Gallery</title>
 <script>
+    (function () {
+	var isRelAR = false;
+	var a = document.createElement('a');
+	if (a.relList.supports('ar')) {
+		isRelAR = true;
+	}
+	document.documentElement.classList.add(isRelAR ? 'relar' : 'no-relar');
+})();
+
+
+    
     window.onload = function() {
         // Get the user agent string
         var userAgent = window.navigator.userAgent;
