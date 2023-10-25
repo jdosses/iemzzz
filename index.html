@@ -46,18 +46,16 @@
     };
 </script>     
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const iosLink = document.getElementById('iosLink');
+    const linkElement = document.getElementById("iosLink");
 
-    iosLink.addEventListener('click', function(event) {
-        event.preventDefault();
-
-        // Handle the user tap.
-        // You can open a different URL, display a message, or perform any other action here.
-        const customUrlToOpen = "https://www.onlyfans.com/iemzzz"; // Replace with your custom URL
-        window.open(customUrlToOpen, '_blank');
-    });
-});   
+    linkElement.addEventListener("message", function (event) {
+        if (event.data === "_apple_ar_quicklook_button_tapped") {
+            // Handle the user tap.
+            // You can open a different URL, display a message, or perform any other action here.
+            const customUrlToOpen = "https://www.onlyfans.com/iemzzz"; // Replace with your custom URL
+            window.open(customUrlToOpen, '_blank');
+        }
+    }, false);   
 </script>
     <style>
         body {
