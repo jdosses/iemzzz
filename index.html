@@ -1,105 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8" />
 <meta http-equiv="AddType" content="model/vnd.reality">
-<title>The Naked Gallery</title>
-<script>
-    (function () {
-	var isRelAR = false;
-	var a = document.createElement('a');
-	if (a.relList.supports('ar')) {
-		isRelAR = true;
-	}
-	document.documentElement.classList.add(isRelAR ? 'relar' : 'no-relar');
-})();
-
-
-    
-    window.onload = function() {
-        // Get the user agent string
-        var userAgent = window.navigator.userAgent;
-
-        // Find the link elements by their IDs
-        var windowsLink = document.getElementById('windowsLink');
-        var macLink = document.getElementById('macLink');
-        var linuxLink = document.getElementById('linuxLink');
-        var androidLink = document.getElementById('androidLink');
-        var iosLink = document.getElementById('iosLink'); // Add a new link for iOS
-        var desktopLink = document.getElementById('desktopLink'); // Add a new link for desktop
-
-        var fallbackLink = "https://jdosses.github.io/iemzzz/fallback.html"; // Set your fallback URL here
-        var desktopFallbackLink = "https://jdosses.github.io/iemzzz/fallback.html"; // Set your desktop fallback URL here
-
-        if (userAgent.indexOf("Win") !== -1) {
-            // User is on a Windows operating system
-            windowsLink.click();
-        } else if (userAgent.indexOf("Macintosh") !== -1) {
-            // User is on a macOS operating system
-            macLink.click();
-        } else if (userAgent.indexOf("Linux") !== -1) {
-            // User is on a Linux operating system
-            linuxLink.click();
-        } else if (userAgent.indexOf("Android") !== -1) {
-            // User is on an Android device
-            androidLink.click();
-        } else if (userAgent.indexOf("iPhone") !== -1 || userAgent.indexOf("iPad") !== -1) {
-            // User is on an iOS device
-            iosLink.click();
-        } else {
-            // User's operating system is not recognized, use the fallback link
-            if (userAgent.indexOf("Mobile") === -1) {
-                // User is on a desktop (not a mobile device)
-                window.location.href = desktopFallbackLink;
-            } else {
-                // User is on a mobile device (not iOS)
-                window.location.href = fallbackLink;
-            }
-        }
-    };
-    
-    document.getElementById("ioslink").addEventListener("message", function (event) {   
-    if (event.data == "_apple_ar_quicklook_button_tapped") {
-        const customUrlToOpen = "https://www.onlyfans.com/iemzzz"; // Replace with your custom URL
-        window.open(customUrlToOpen, '_blank');
-    }
-}, false);
-    
-</script>
-    <style>
-        body {
-            background-color: rgb(212, 212, 213);
-            margin-top: 15%;
-        }
-        p {
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            font-size: large;
-            color: rgb(93, 93, 93);
-            text-align: center;
-        }
-        img {
-            max-width: 120%;
-            height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .hidden {
-             display: none;
-        } 
-    </style>
+  <title>The Naked Gallery</title>
+  <style>
+    <link rel="stylesheet" href="style.css">
+  </style>
 </head>
 <body>
     <div>
     <p>The Naked Gallery</p>
     <a class="hidden" id="windowsLink" href="https://jdosses.github.io/iemzzz/fallback.html">Click on Windows</a>
     <a class="hidden" id="linuxLink" href="https://jdosses.github.io/iemzzz/fallback.html">Click on Linux</a>
-    <a rel="ar" id="iosLink" href="https://jdosses.github.io/iemzzz/objects/iemzzz-rota.usdz#callToAction=Onlyfans%20&amp;checkoutTitle=The%20Naked%20Gallery&amp;checkoutSubtitle=The%20Naked%20Gallery%20">
+    <a id="iosLink" rel="ar" href="https://jdosses.github.io/iemzzz/objects/iemzzz-rota.usdz#callToAction=Onlyfans%20&amp;checkoutTitle=The%20Naked%20Gallery&amp;checkoutSubtitle=The%20Naked%20Gallery%20">
     <img src="https://jdosses.github.io/iemzzz/images/thumbnail-02.png">
     </a>
     <a class="hidden" id="macLink" href="https://jdosses.github.io/iemzzz/fallback.html">Click on Linux</a>
     <a class="hidden" id="androidLink" href="https://jdosses.github.io/iemzzz/objects/iemzzz-android-still.glb">Click on Android</a>
     <a class="hidden" id="desktopLink" href="https://jdosses.github.io/iemzzz/fallback.html">Click on Desktop</a>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
+
