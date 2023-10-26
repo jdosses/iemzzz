@@ -46,7 +46,7 @@ window.onload = function() {
         if (event.data === "_apple_ar_quicklook_button_tapped") {
             // Handle the user tap.
             // You can open a different URL, display a message, or perform any other action here.
-            const customUrlToOpen = "https://osses.com.co"; // Replace with your custom URL
+            const customUrlToOpen = "https://onlyfans.com/iemzzz"; // Replace with your custom URL
             window.open(customUrlToOpen, '_self');
         }
     }, false);
